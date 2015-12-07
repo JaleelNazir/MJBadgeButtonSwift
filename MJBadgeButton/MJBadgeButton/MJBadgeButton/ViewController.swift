@@ -21,8 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Your Title"
-
+        self.title = "MJBadgeButton"
         
         let image = UIImage(named: "Cart")
         
