@@ -1,40 +1,24 @@
 
 1. Add MJBadgeBarButton.swift ito your Project.
-2. create object ` var barButton = MJBadgeBarButton()` in Viewcontroller class
+2.      var barButton : MJBadgeBarButton!
 
-        override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.title = "MJBadgeButton"
-        
-        let image = UIImage(named: "Cart")
-        
-        let customButton = UIButton(type: UIButtonType.Custom) as UIButton
-        customButton.frame = CGRectMake(0, 0, 35.0, 35.0)
-        customButton .addTarget(self, action: "OnBagdeButtonClick", forControlEvents: UIControlEvents.TouchUpInside)
-        customButton .setImage(image, forState: UIControlState.Normal)
-        
-        let MJBB_withBadge = MJBadgeBarButton()
+        let customButton = UIButton(type: UIButtonType.custom)
+        customButton.frame = CGRect(x: 0, y: 0, width: 35.0, height: 35.0)
+        customButton.addTarget(self, action: #selector(self.onBagdeButtonClick), for: .touchUpInside)
+        customButton.setImage(UIImage(named: "Cart"), for: .normal)
 
-        barButton = MJBB_withBadge.initWithCustomBadgeBarButton(customButton) as MJBadgeBarButton
+        self.btnBarBadge = MJBadgeBarButton()
+        self.btnBarBadge.setup(customButton: customButton)
         
-        barButton.shouldHideBadgeAtZero = false
-        //        barButton.shouldAnimateBadge = false
-        barButton.badgeValue = "0"
-        barButton.badgeOriginX = 20.0
-        barButton.badgeOriginY = -4
+        //        self.btnBarBadge.shouldHideBadgeAtZero = true
+        //        self.btnBarBadge.shouldAnimateBadge = false
         
-        self.navigationItem.rightBarButtonItem = barButton
-        }
-    
-        func OnBagdeButtonClick()
-        {
-        print("MJBadgeButton Clicked")
-        }
-        @IBAction func stepper_OnClick(sender: UIStepper) {
-        barButton.badgeValue = sender.value.toString()
-        }
-    
+        self.btnBarBadge.badgeValue = "0"
+        self.btnBarBadge.badgeOriginX = 20.0
+        self.btnBarBadge.badgeOriginY = -4
+        
+        self.navigationItem.rightBarButtonItem = self.btnBarBadge
+       
 # The MIT License (MIT)
 
 Copyright (c) 2015 JaleelNazir
