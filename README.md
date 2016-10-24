@@ -1,3 +1,5 @@
+#MJBadgeButtonSwift
+![MJBadgeButtonSwift](https://3.bp.blogspot.com/-arcHZMmLh3w/WA4gBJkGRFI/AAAAAAAAAtQ/jg2iNQqz8OwhfZpXtjZfQmq3kni9hlVPgCK4B/s1600/MJBadgeButtonSwift.png)
 
 Add MJBadgeBarButton.swift ito your Project.
 
