@@ -1,6 +1,7 @@
 
-1. Add MJBadgeBarButton.swift ito your Project.
-2.      var barButton : MJBadgeBarButton!
+Add MJBadgeBarButton.swift ito your Project.
+
+        var barButton : MJBadgeBarButton!
 
         let customButton = UIButton(type: UIButtonType.custom)
         customButton.frame = CGRect(x: 0, y: 0, width: 35.0, height: 35.0)
